@@ -13,7 +13,7 @@ function Update() {
   let {id} = useParams()
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8080/users/${id}`)
+    axios.get(`https://user-register-8rjx.onrender.com/users/${id}`)
    .then(res => {
      setName(res.data.data.username)
      setTel(res.data.data.tel)
@@ -32,7 +32,7 @@ function Update() {
     const confirm = window.confirm("Do you want to update user?")
 
     if(confirm){
-      axios.put(`http://127.0.0.1:8080/users/${id}`, {
+      axios.put(`https://user-register-8rjx.onrender.com/users/${id}`, {
         username: name,
         tel: tel,
         email: email
@@ -73,21 +73,7 @@ function Update() {
             <Link to='/'>Back</Link>
           </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
+         
       </form>
     </div>
   )
